@@ -1,0 +1,19 @@
+ion-content ion-toolbar {
+  --background: translucent;
+}
+
+ion-content, body, ion-app, *{
+	--ion-background-color:#5b39f17a;
+}
+
+canvas{
+  background-color:  #5b39f17a ;
+}
+
+
+.buttonColor{
+	--color	: #050505;
+	--background : #a5b803;
+	--color-hover: #014d20;
+	font-family: "Times New Roman", "Times", serif;
+}

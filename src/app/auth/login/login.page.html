@@ -1,0 +1,41 @@
+<ion-header>
+
+</ion-header>
+
+<ion-content >
+
+<br>
+
+    <ion-item color="medium"  style="padding-top: 20%;">
+        <ion-label>Usuario</ion-label>
+        <ion-input required [(ngModel)]="user.email" value="admin@gmail.com"></ion-input>
+    </ion-item>
+
+    <ion-item color="medium"  style="padding-top: 8%;">
+        <ion-label>Contraseña</ion-label>
+        <ion-input type="password" required [(ngModel)]="user.password" value="123456"> </ion-input>
+    </ion-item>
+
+    <br>
+    <ion-button expand="full" class="buttonColor" (click)=logIn($event)> Entrar </ion-button>
+
+    <!--Necesitas <a href="/register">Crear cuenta</a> ? -->
+	
+    <div color="medium" class="spin" *ngIf="loggingIn">
+      <ion-spinner name="bubbles"></ion-spinner>
+    </div>
+
+    
+    <ion-item color="medium" style="padding-top: 8%;">
+      <ion-label>Elegir Usuario</ion-label>
+      <ion-select color="medium" placeholder="Elegir usuario" (ionChange)=usuario($event)>
+        <ion-select-option color="medium" value="tomas@gmail.com">tomas@gmail.com</ion-select-option>
+        <ion-select-option color="medium" value="asd@gmail.com">asd@gmail.com</ion-select-option>
+        <ion-select-option color="medium" value="test123@gmail.com">test123@gmail.com</ion-select-option>
+        <ion-select-option color="medium" value="admin@gmail.com">admin@gmail.com</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+
+
+</ion-content>

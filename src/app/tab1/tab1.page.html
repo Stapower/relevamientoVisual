@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+
+</ion-header>
+<br>
+<br>
+<br>
+
+<ion-content [fullscreen]="true" >
+  <ion-header collapse="condense" color="medium" >
+    <ion-toolbar color="medium">
+      <ion-title color="medium" size="large" align-title="center">Cosas Lindas o Feas </ion-title >
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-card (click)="cosasFeas()" color="medium">
+    <ion-item color="medium">
+      <ion-label class="ionLabel" >Cosas Feas</ion-label>
+    </ion-item>
+
+    <ion-card-content color="medium">
+      <ion-img color="medium" style="width: 40%; height: 40%;  margin: auto;"[src]=edificioFeo></ion-img>
+    </ion-card-content>
+
+  </ion-card>
+
+  <ion-card color="medium" (click)="cosasLindas()">
+    <ion-item color="medium">
+      <ion-label class="ionLabel">Cosas Lindas </ion-label>
+    </ion-item>
+    
+    <ion-card-content color="medium">
+      <ion-img color="medium" style="width: 40%; height: 40%;  margin: auto;"[src]=edificioLindo></ion-img>
+    </ion-card-content>
+
+  </ion-card>
+
+</ion-content>

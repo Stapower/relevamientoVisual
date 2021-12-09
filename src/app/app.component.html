@@ -1,0 +1,30 @@
+
+<!--div *ngIf="counter==1" class="splash">
+  <div class="spinner"> </div>
+</!--div-->
+
+<ion-app>
+  <!--ion-split-pane when="true">
+
+    <ion-menu contentId="main-content" >
+      <ion-content>
+        <ion-list lines="none">
+          <ion-list-header>
+            Account
+          </ion-list-header>
+
+          <ion-menu-toggle autoHide="true">
+            <ion-item routerLink="/account" routerLinkActive="active" routerDirection="root" detail="false">
+              <ion-icon slot="start" name="person"></ion-icon>
+              <ion-label>
+                Account
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+  </!--ion-split-pane-->
+  <app-log-out [user2] = user></app-log-out>
+  <ion-router-outlet></ion-router-outlet>
+</ion-app>

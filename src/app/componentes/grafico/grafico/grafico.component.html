@@ -1,0 +1,43 @@
+<button  class="btn btn-success buttonColor" (click)="showGraphic('fotosLindas')">Fotos Lindas</button>
+<button  class="btn btn-success buttonColor" (click)="showGraphic('fotosFeas')">Fotos Feas</button>
+
+
+
+<!--button (click)="exportToExcel()" class="btn btn-success">Excel</!--button-->
+
+	
+<div id="chartContainer" style="height: 370px; width: 100%;" (click)=clickedOnChart($event)></div>
+
+<div #TABLE>
+	<table class="table table-bordered">
+		<thead class="thead-dark">
+			<!--tr>
+				<th *ngFor="let header of columns">{{header}}</th>
+			</!--tr-->
+		</thead>
+		<tbody>
+			<tr *ngFor="let row of rows; let index=index">
+				<td> {{row}} </td>
+				<td> {{columns[index]}} </td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+		<!--ion-item >
+						
+      <ion-img *ngIf="fotoUrl" style="width: 25%; height: 25%;" src = {{fotoUrl[0]}} ></ion-img>
+      
+    </!--ion-item-->
+    
+    <ion-list content="light dark" color="medium">
+      <ion-item  content="light dark" color="medium" *ngFor="let foto of fotoUrl">
+        
+        <ion-img content="light dark" color="medium" style="width: 50%; height: 50%; margin: auto;" src = {{foto.image}} alt="foto.user" ></ion-img>
+
+      </ion-item>
+    </ion-list>
+
+    <div *ngIf="startSpinner && fotoUrl.length == 0">
+      <ion-spinner name="bubbles"></ion-spinner>
+    </div>

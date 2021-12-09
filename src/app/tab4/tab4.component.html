@@ -1,0 +1,32 @@
+<ion-header [translucent]="true" color="medium">
+	<ion-toolbar color="medium">
+	</ion-toolbar>
+</ion-header>
+<!-- Default Refresher -->
+
+<ion-content [fullscreen]="true">
+
+	<!--ion-button (click)="doRefresh($event)" class="buttonColor">  Refrescar </ion-button-->
+
+	<div color="medium" class="spin" *ngIf="fotos == null || fotos.length==0">
+		<ion-spinner name="bubbles"></ion-spinner>
+	</div>
+
+	<!--ion-button class="buttonColor" (click)="orderBy('Fecha')"> Ordenar por Fecha </ion-button-->
+
+		<ion-card *ngFor="let foto of fotos; let i = index" color="medium">
+
+			<ion-item color="medium">
+				<ion-label style="margin: center;"class="ionLabel">Es una {{foto.type | tipoFoto2}} foto, con fecha {{foto.fecha | fecha2}}
+				</ion-label>
+			</ion-item>
+
+			<ion-card-content color="medium">
+				<ion-img color="medium" style="width: 45%; height: 45%; margin: auto;" src={{foto.image}} ></ion-img>
+				<ion-label style="margin: center;"> A {{foto.voto.length}} personas les gustó esta foto.</ion-label>			
+			</ion-card-content>
+
+		</ion-card>
+
+
+</ion-content>
